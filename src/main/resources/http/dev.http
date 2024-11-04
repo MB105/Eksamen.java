@@ -1,0 +1,47 @@
+### Get all trips
+GET {{url}}/trips
+Accept: application/json
+
+### Get a trip by ID
+GET {{url}}/trips/1
+Accept: application/json
+
+### Create a new trip
+POST {{url}}/trips
+Content-Type: application/json
+
+{
+  "startTime": "2024-12-01T10:00:00",
+  "endTime": "2024-12-01T12:00:00",
+  "longitude": 12.345678,
+  "latitude": 34.567890,
+  "name": "Exciting Adventure",
+  "price": 99.99,
+  "category": "FOREST"
+}
+
+### Update a trip by ID
+PUT {{url}}/trips/1
+Content-Type: application/json
+
+{
+  "startTime": "2024-12-01T09:00:00",
+  "endTime": "2024-12-01T11:00:00",
+  "longitude": 12.345678,
+  "latitude": 34.567890,
+  "name": "Updated Adventure",
+  "price": 89.99,
+  "category": "BEACH"
+}
+
+### Delete a trip by ID
+DELETE {{url}}/trips/2
+
+### Add a guide to a trip
+PUT {{url}}/trips/1/guides/1
+
+### Populate the database with trips and guides
+POST {{url}}/trips/populate
+
+
+
